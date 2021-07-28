@@ -1,7 +1,6 @@
 import "./styles.css";
 import { useEffect, useState } from "react";
-import Pagination from "@material-ui/lab/Pagination";
-
+import { Pagination } from "@material-ui/lab";
 export default function App() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -15,7 +14,6 @@ export default function App() {
     setUsers(user.data);
     setTotalPages(user.total_pages);
     setCurrentPage(user.page);
-    console.log(user);
     setLoading(false);
   }
 
